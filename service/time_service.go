@@ -1,6 +1,7 @@
 package service
 
 import (
+	"fmt"
 	"time"
 )
 
@@ -19,5 +20,6 @@ func (t *TimeService) GetTime(request TimeServiceRequest, response *TimeServiceR
 	// Directly reply the current time
 	response.CurrentTime = time.Now()
 	response.Status = "success"
+	fmt.Println(response.CurrentTime)
 	return nil
 }
